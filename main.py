@@ -8,6 +8,7 @@ app = Flask(__name__)
 def homepage():
     buttons = ["Top rated", "Upcoming", "Popular", "Now Playing"]
     types = [button.lower().replace(" ", "_") for button in buttons]
+    print(types)
     selected_list = request.args.get('list_type', "popular")
     print(selected_list)
     if selected_list not in types:

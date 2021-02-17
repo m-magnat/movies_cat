@@ -34,7 +34,7 @@ def get_single_movie(movie_id):
 print(get_poster_url("/eLT8Cu357VOwBVTitkmlDEg32Fs.jpg"))
 
 def get_movies(how_many, list_type):
-    t = "popular"
+    t = list_type
     types = ["popular", "upcoming", "top_rated", "now_played"]
     data = get_movies_list(t)
     return data["results"][:how_many]
