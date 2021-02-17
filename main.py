@@ -7,14 +7,9 @@ app = Flask(__name__)
 @app.route('/')
 def homepage():
     buttons = ["Top rated", "Upcoming", "Popular", "Now Playing"]
-    types = [button.lower().replace(" ", "_") for button in buttons]
-    print(types)
     selected_list = request.args.get('list_type', "popular")
-    print(selected_list)
-    if selected_list not in types:
-        selected_list="popular"
     movies = tmdb_client.get_movies(how_many=8, list_type = selected_list)
-    return render_template("homepage.html", movies = movies, current_list = selected_list, buttons = buttons)
+    return render_template("homepage.html", movies = movies, buttons = buttons)
     
 
 @app.context_processor
