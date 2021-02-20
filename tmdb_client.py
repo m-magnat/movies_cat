@@ -1,5 +1,5 @@
 import requests
-API_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlOTQ2YzM5Njk0M2EzM2E2ZTRkNzkzMDkwYTA5NjVkMSIsInN1YiI6IjVmZDNjYTVkYTBiNmI1MDA0MGZhYWNiMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.UAILJLxS8FlWFv6m1eMlvm-QDWGClba_bCUHs8huNYA"
+API_TOKEN = ""
 
 
 def get_movies_list(list_type):
